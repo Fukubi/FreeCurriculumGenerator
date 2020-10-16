@@ -1,80 +1,126 @@
-#container {
+#landing-page {
     width: 100vw;
     height: 100vh;
-    background: #1e5f74;
+    background: #1E5F74;
 
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-}
-
-#container img {
-    width: 500px;
-}
-
-h1, p, a {
-    color: #FFF;
-}
-
-#container main #content {
-    display: flex;
-    flex-direction: row;
-}
-
-#container #credits {
-    margin-bottom: 10px;
-}
-
-#container #credits a {
-    margin-top: 100px;
-
-    display: flex;
-    justify-content: right;
     align-items: center;
-}
 
-#container header {
-    margin-bottom: 15px;
 }
+#landing-page main {
+    position: relative;
+    width: 100%;
+    max-width: 944px;
+    height: 100%;
+    max-height: 530px;
 
-#container header h1 {
-    font-family: 'Lato', sans-serif;
+    display:  flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
 }
-
-#container main #description p, a {
-    font-family: 'Roboto', sans-serif;
+#landing-page main img {
+    position: absolute;
+    width: 322px;
+    height: 215px;
+    bottom: 40%;
+    left: 55%;
 }
-
-#container main #description #linkButtons {
-    margin-top: 10px;
+#landing-page main .nerv a {
+    margin-bottom: 50px;
     display: flex;
-    flex-direction: row;
-}
-
-#container main #description #linkButtons a {
-
-    display: flex;
-    align-items: center;
     justify-content: center;
-
-    width: 180px;
-    height: 60px;
-
-    border-radius: 50px;
-
+    align-items: center;
     text-decoration: none;
 }
+#landing-page main .nerv a h2 {
+    margin-left: 15px;
+    width: 298px;
+    height: 61px;
+    left: 64px;
+    top: 146px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 
-#container main #description #linkButtons #generate {
-    background-color: #1aa6b7;
-    box-shadow: 0.2px 0.2px 5px #0f3057;
+    color: #FFFFFF;
 
-    margin-right: 10px;
 }
+#landing-page main {
+    color: #C4C4C4;
 
-#container main #description #linkButtons #about {
-    background-color: #f56a79;
-    box-shadow: 0.2px 0.2px 5px #ff414d;
 }
+#landing-page main h1 {
+    height: 97px;
+    left: 76px;
+    top: 253px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 45px;
+    text-align: center;
+}
+#landing-page main p {
+    width: 458px;
+    height: 67px;
+    left: 89px;
+    top: 350px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#landing-page main span {
+    width: 471px;
+    height: 70px;
+    left: 83px;
+    top: 479px;
 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+#landing-page main .curriculum-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-bottom: 95px;
+}
+#landing-page main .curriculum-buttons {
+    width: 100%;
+    max-width: 471px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#landing-page main .curriculum-buttons a {
+    width: 349px;
+    margin-left: 50px;
+    font-style: normal;
+    font-weight: normal;
+    border-radius: 30px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #F56A79;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+#landing-page main .curriculum-buttons a:hover {
+    background: rgba(245, 106, 121, 0.3);
+}
