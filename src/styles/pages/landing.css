@@ -1,0 +1,80 @@
+#container {
+    width: 100vw;
+    height: 100vh;
+    background: #1e5f74;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#container img {
+    width: 500px;
+}
+
+h1, p, a {
+    color: #FFF;
+}
+
+#container main #content {
+    display: flex;
+    flex-direction: row;
+}
+
+#container #credits {
+    margin-bottom: 10px;
+}
+
+#container #credits a {
+    margin-top: 100px;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#container header {
+    margin-bottom: 15px;
+}
+
+#container header h1 {
+    font-family: 'Lato', sans-serif;
+}
+
+#container main #description p, a {
+    font-family: 'Roboto', sans-serif;
+}
+
+#container main #description #linkButtons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#container main #description #linkButtons a {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 180px;
+    height: 60px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+}
+
+#container main #description #linkButtons #generate {
+    background-color: #1aa6b7;
+    box-shadow: 0.2px 0.2px 5px #0f3057;
+
+    margin-right: 10px;
+}
+
+#container main #description #linkButtons #about {
+    background-color: #f56a79;
+    box-shadow: 0.2px 0.2px 5px #ff414d;
+}
+
