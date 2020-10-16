@@ -1,0 +1,29 @@
+#button-container {
+    width: 100%;
+}
+
+
+#button-container button {
+    left: 89px;
+    top: 619px;
+    background: #1AA6B7;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 58px;
+    cursor: pointer;
+    color: #FFF;
+    transition: background-color 0.2s;
+}
+
+#button-container button:hover {
+    background: #138795;
+}
+
+#button-container button:active {
+    transition: 0.3s;
+    background: #138795;
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.25);
+}
