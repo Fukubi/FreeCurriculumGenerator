@@ -17,7 +17,7 @@ function Landing() {
                 </div>
                 <header>
                     <h1>Free Curriculum Generator</h1>
-                    <h1>Gere seu currico de forma totalmente gratuita</h1>
+                    <h1>Gere seu currículo de forma totalmente gratuita</h1>
                 </header>
 
                 <main>
