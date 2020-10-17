@@ -6,6 +6,7 @@ import Button from '../components/Button'
 
 import '../styles/pages/landing.css';
 
+
 //<a href='https://www.freepik.com/vectors/banner'>Banner vector created by freepik - www.freepik.com</a>
 function Landing() {
     return (
