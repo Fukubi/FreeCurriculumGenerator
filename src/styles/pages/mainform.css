@@ -1,20 +1,67 @@
-#container {
-    width: 100vw;
-    height: 100vh;
+#generate-page {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
 
     display: flex;
     flex-direction: column;
-}
-
-#container header {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
 
-    text-align: center;
-    flex-direction: column;
+    background: #1E5F74;
 }
 
-#container header h1 {
-    padding-bottom: 40px;
+#generate-page h1, h2 {
+    color: #FFF;
+    margin-bottom: 10px;
+}
+
+#generate-page h1, h2 {
+    text-align: center;
+}
+
+#generate-page h2 {
+    margin-bottom: 20px;
+}
+
+#generate-page main {
+    background-color: #FFF;
+    width: 700px;
+
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 1px 3px 5px #000;
+}
+
+#generate-page main .input-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+#generate-page main .input-block label {
+    color: #206177;
+    margin-bottom: 10px;
+
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#generate-page main .input-block input {
+    background-color: #107AB0;
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+
+    color: #FFF;
+    padding: 20px;
+}
+
+#generate-page main .input-block textarea {
+    background-color: #107AB0;
+    border: none;
+    border-radius: 20px;
+
+    padding: 20px;
+    color: #FFF;
 }
