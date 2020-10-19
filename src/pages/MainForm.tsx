@@ -1,5 +1,6 @@
-import React, { FormEvent, useState, useEffect } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { jsPDF } from 'jspdf';
+import { Link } from 'react-router-dom';
 
 import Button from '../components/Button';
 
@@ -14,7 +15,7 @@ function MainForm() {
     const [nacionality, setNacionality] = useState("");
     const [condition, setCondition] = useState("");
     const [objective, setObjective] = useState("");
-    const [qualifications, setQualifications] = useState<string[]>([]);
+    const [qualifications, setQualifications] = useState<string[]>([""]);
     const [academicFormation, setAcademicFormation] = useState("");
     const [language, setLanguage] = useState("");
     const [tecnology, setTecnology] = useState("");
@@ -38,43 +39,57 @@ function MainForm() {
         doc.save('curriculo.pdf');
     }
 
-    function handlePlusClick() {
-        let qualificationsTemp = qualifications;
-
-        qualificationsTemp.push("");
-        setQualifications(qualificationsTemp);
+    function handleAddQualification() {
+        setQualifications([...qualifications, ""]);
         console.log(qualifications);
+    }
+
+    function handleRemoveQualification(index: number) {
+        let qualificationsTemp = qualifications;
+        delete qualificationsTemp[index];
+        setQualifications(qualificationsTemp);
     }
 
     function changeQualifications(text: string, index: number) {
         let qualificationsTemp = qualifications;
-        
+
         qualificationsTemp[index] = text;
         setQualifications(qualificationsTemp);
     }
 
-    
+
 
     return (
         <div id="generate-page">
             <header>
                 <div>
                     <h1>Curriculum Generator</h1>
-                    <h2>Informe os dados básicos para que o currículo seja gerado</h2>
                 </div>
             </header>
 
             <main>
-                <form action="" onSubmit={handleFormSubmit}>
+                <h1>Gere o seu currículo de forma Online</h1>
+                <form onSubmit={handleFormSubmit}>
 
-                    <div className="input-block">
-                        <label htmlFor="name">Nome:</label>
-                        <input
-                            type="text"
-                            id="name"
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                        />
+                    <div className="input-block-name">
+                        <div className="input-container">
+                            <label htmlFor="name">Nome</label>
+                            <input
+                                type="text"
+                                id="name"
+                                value={name}
+                                onChange={e => setName(e.target.value)}
+                            />
+                        </div>
+                        <div className="input-container">
+                            <label htmlFor="name">Sobrenome</label>
+                            <input
+                                type="text"
+                                id="name"
+                                value={name}
+                                onChange={e => setName(e.target.value)}
+                            />
+                        </div>
                     </div>
 
                     <div className="input-block">
@@ -131,12 +146,17 @@ function MainForm() {
 
                     <div className="input-block">
                         <label htmlFor="condition">Condição Civil:</label>
-                        <input
-                            type="text"
+                        <select
+                            name="condition"
                             id="condition"
                             value={condition}
                             onChange={e => setCondition(e.target.value)}
-                        />
+                        >
+                            <option value="solteiro(a)">solteiro(a)</option>
+                            <option value="casado">casado(a)</option>
+                            <option value="divorciado (a)">divorciado(a)</option>
+                            <option value="viúvo(a)">viúvo(a)</option>
+                        </select>
                     </div>
 
                     <div className="input-block">
@@ -149,83 +169,116 @@ function MainForm() {
                         />
                     </div>
 
-                    <div className="input-block">
-                        <div>
-                            <label htmlFor="qualifications">Qualificações:</label>
-                            <button onClick={handlePlusClick} type="button">+</button>
+                    <div className="input-block-academic">
+                        <h1>Formação acadêmica</h1>
+                        <div className="input-academic-container">
+                            <div className="input-container">
+                                <label htmlFor="course">Curso</label>
+                                <input type="text" />
+                            </div>
+                            <div className="date-container">
+                                <div className="input-container">
+                                    <label htmlFor="course">Inicio</label>
+                                    <input type="date" />
+                                </div>
+                                <div className="input-container">
+                                    <label htmlFor="course">Termino</label>
+                                    <input type="date" />
+                                </div>
+                            </div>
+                            <div className="input-container">
+                                <label htmlFor="course">Instituição</label>
+                                <input type="text" />
+                            </div>
+                            <div className="button-container">
+                                <button type="button">+</button>
+                            </div>
                         </div>
-                        {qualifications.map((text , index) => (
-                            <input
-                                key={text}
-                                type="text"
-                                id="qualifications"
-                                value={text}
-                                onChange={e => changeQualifications(e.target.value, index)}
-                            />
-                        ))}
                     </div>
 
-                    <div className="input-block">
-                        <label htmlFor="formations">Formação acadêmica:</label>
-                        <textarea
-                            name="formations"
-                            id="formations"
-                            cols={30}
-                            rows={10}
-                            value={academicFormation}
-                            onChange={e => setAcademicFormation(e.target.value)}
-                        ></textarea>
+                    <div className="input-block-language">
+                        <h1>Idioma</h1>
+                        <div className="input-language-container">
+                            <div className="inputs-container">
+                                <div className="input-container">
+                                    <label htmlFor="course">Idioma</label>
+                                    <input type="text" />
+                                </div>
+                                <div className="input-container">
+                                    <label htmlFor="course">Nível</label>
+                                    <select name="course" id="level">
+                                        <option value="Básico">Básico</option>
+                                        <option value="Intermediário">Intermediário</option>
+                                        <option value="Avançado">Avançado</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="button-container">
+                                <button type="button">+</button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="input-block">
-                        <label htmlFor="languages">Idioma:</label>
-                        <textarea
-                            name="languages"
-                            id="languages"
-                            cols={30}
-                            rows={10}
-                            value={language}
-                            onChange={e => setLanguage(e.target.value)}
-                        ></textarea>
+                    <div className="input-block-academic">
+                        <h1>Experiência profissional</h1>
+                        <div className="input-academic-container">
+                            <div className="input-container">
+                                <label htmlFor="course">Empresa</label>
+                                <input type="text" />
+                            </div>
+                            <div className="date-container">
+                                <div className="input-container">
+                                    <label htmlFor="course">Inicio</label>
+                                    <input type="date" />
+                                </div>
+                                <div className="input-container">
+                                    <label htmlFor="course">Termino</label>
+                                    <input type="date" />
+                                </div>
+                            </div>
+                            <div className="input-container">
+                                <label htmlFor="course">Atividade exercida</label>
+                                <textarea cols={30} rows={6} />
+                            </div>
+                            <div className="button-container">
+                                <button type="button">+</button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="input-block">
-                        <label htmlFor="informatic">Seu conhecimento em informática:</label>
-                        <textarea
-                            name="informatic"
-                            id="informatic"
-                            cols={30}
-                            rows={10}
-                            value={tecnology}
-                            onChange={e => setTecnology(e.target.value)}
-                        ></textarea>
+                    <div className="input-block-academic">
+                        <h1>Formação acadêmica</h1>
+                        <div className="input-academic-container">
+                            <div className="input-container">
+                                <label htmlFor="course">Curso</label>
+                                <input type="text" />
+                            </div>
+                            <div className="date-container">
+                                <div className="input-container">
+                                    <label htmlFor="course">Inicio</label>
+                                    <input type="date" />
+                                </div>
+                                <div className="input-container">
+                                    <label htmlFor="course">Termino</label>
+                                    <input type="date" />
+                                </div>
+                            </div>
+                            <div className="input-container">
+                                <label htmlFor="course">Instituição</label>
+                                <input type="text" />
+                            </div>
+                            <div className="button-container">
+                                <button type="button">+</button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="input-block">
-                        <label htmlFor="experience">Experiência profissional:</label>
-                        <textarea
-                            name="experience"
-                            id="experience"
-                            cols={30}
-                            rows={10}
-                            value={experience}
-                            onChange={e => setExperience(e.target.value)}
-                        ></textarea>
+                    <div className="generate-cancel-container">
+                        <Button buttonText="Gerar currículo" />
+                        <Link to="/">
+                        Cancelar
+                        </Link>
                     </div>
-
-                    <div className="input-block">
-                        <label htmlFor="complements">Formação complementar:</label>
-                        <textarea
-                            name="complements"
-                            id="complements"
-                            cols={30}
-                            rows={10}
-                            value={formation}
-                            onChange={e => setFormation(e.target.value)}
-                        ></textarea>
-                    </div>
-
-                    <Button buttonText="Gerar" />
                 </form>
             </main>
         </div>

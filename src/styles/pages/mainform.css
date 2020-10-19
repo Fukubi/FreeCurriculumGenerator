@@ -1,7 +1,7 @@
 #generate-page {
     width: 100%;
     height: 100%;
-    padding: 25px;
+    padding-bottom: 25px;
 
     display: flex;
     flex-direction: column;
@@ -11,26 +11,36 @@
     background: #1E5F74;
 }
 
-#generate-page h1, h2 {
+#generate-page header {
+    display: flex;
+    align-items: center;
+    background: #2D829D;
+    width: 100%;
+    height: 65px;
+
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+#generate-page header h1 {
     color: #FFF;
-    margin-bottom: 10px;
-}
-
-#generate-page h1, h2 {
-    text-align: center;
-}
-
-#generate-page h2 {
-    margin-bottom: 20px;
+    font-weight: normal;
 }
 
 #generate-page main {
-    background-color: #FFF;
+    background-color: #E8E8E8;
     width: 700px;
 
     border-radius: 20px;
-    padding: 30px;
+    padding: 15px 35px;
     box-shadow: 1px 3px 5px #000;
+}
+
+#generate-page main h1 {
+    color: #1E5F74;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 #generate-page main .input-block {
@@ -39,22 +49,77 @@
     margin-bottom: 30px;
 }
 
+#generate-page main .input-block-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#generate-page main .input-block-name .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#generate-page main .input-block-name .input-container label {
+    color: #1E5F74;
+    margin-left: 20px;
+    margin-bottom: 15px;
+
+    font-size: 20px;
+    font-weight: normal;
+
+    font-weight: 600;
+}
+
+#generate-page main .input-block-name .input-container input {
+    background: #FFF;
+    border: none;
+    border-radius: 20px;
+
+    width: 290px;
+    height: 40px;
+}
+
 #generate-page main .input-block label {
-    color: #206177;
+    color: #1E5F74;
     margin-bottom: 10px;
 
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: normal;
+
+    padding-left: 20px;
 }
 
 #generate-page main .input-block input {
-    background-color: #107AB0;
+    background-color: #FFF;
     border: none;
-    border-radius: 20px;
-    height: 50px;
+    border-radius: 30px;
+    height: 45px;
 
     color: #FFF;
     padding: 20px;
+
+    color: #000;
+}
+
+#generate-page main .input-block #condition {
+    background-color: #FFF;
+    border: none;
+    border-radius: 30px;
+    height: 45px;
+
+    color: #FFF;
+    padding: 10px 20px;
+
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#generate-page main .input-block .qualifications {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #generate-page main .input-block textarea {
@@ -64,4 +129,215 @@
 
     padding: 20px;
     color: #FFF;
+}
+
+#generate-page main .input-block .input-block-academic {
+    display: flex;
+}
+
+#generate-page main .input-block-academic h1 {
+    text-align: left;
+
+    margin-bottom: 5px;
+}
+
+#generate-page main .input-block-academic .input-academic-container {
+    padding: 20px;
+    border: solid 2px #7DA0AB;
+    border-radius: 20px;
+
+    margin-bottom: 50px;
+}
+
+#generate-page main .input-block-academic .input-academic-container .input-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 30px;
+}
+
+#generate-page main .input-block-academic .input-academic-container .date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+}
+
+#generate-page main .input-block-academic .input-academic-container .input-container label {
+    color: #1E5F74;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    font-weight: normal;
+
+    padding-left: 20px;
+}
+
+#generate-page main .input-block-academic .input-academic-container .input-container input {
+    background-color: #FFF;
+    border: none;
+    border-radius: 30px;
+    height: 45px;
+
+    color: #FFF;
+    padding: 20px;
+
+    color: #000;
+}
+
+#generate-page main .input-block-academic .input-academic-container .input-container textarea {
+    background-color: #FFF;
+    border: none;
+    border-radius: 30px;
+
+    color: #FFF;
+    padding: 20px;
+
+    color: #000;
+}
+
+#generate-page main .input-block-academic .input-academic-container .button-container {
+    display: flex;
+    justify-content: flex-end;
+
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+#generate-page main .input-block-academic .input-academic-container .button-container button {
+    width: 70px;
+    height: 70px;
+
+    border: none;
+    background: #1E5F74;
+    border-radius: 20px;
+
+    color: #FFF;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+#generate-page main .input-block-language {
+    margin-top: 40px;
+}
+
+#generate-page main .input-block-language h1 {
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+#generate-page main .input-block-language .input-language-container {
+    padding: 20px;
+    border: solid 2px #7DA0AB;
+    border-radius: 20px;
+
+    margin-bottom: 50px;
+}
+
+#generate-page main .input-block-language .input-language-container .inputs-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#generate-page main .input-block-language .input-language-container .inputs-container .input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#generate-page main .input-block-language .input-language-container .inputs-container .input-container label {
+    color: #1E5F74;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    font-weight: normal;
+
+    padding-left: 20px;
+}
+
+#generate-page main .input-block-language .input-language-container .inputs-container .input-container input {
+    background-color: #FFF;
+    border: none;
+    border-radius: 30px;
+    height: 45px;
+
+    color: #FFF;
+    padding: 20px;
+
+    color: #000;
+}
+
+#generate-page main .input-block-language .input-language-container .inputs-container .input-container select {
+    background-color: #FFF;
+    border: none;
+    border-radius: 30px;
+    width: 250px;
+    height: 45px;
+
+    color: #FFF;
+    padding: 10px 20px;
+
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#generate-page main .input-block-language .input-language-container .button-container {
+    display: flex;
+    justify-content: flex-end;
+
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+#generate-page main .input-block-language .input-language-container .button-container button {
+    width: 70px;
+    height: 70px;
+
+    border: none;
+    background: #1E5F74;
+    border-radius: 20px;
+
+    color: #FFF;
+    font-size: 50px;
+    font-weight: normal;
+
+    margin-top: 20px;
+}
+
+#generate-page main form .generate-cancel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#generate-page main form .generate-cancel-container #button-container {
+    width: 450px;
+    margin-bottom: 20px;
+}
+
+#generate-page main form .generate-cancel-container #button-container button {
+    color: #BEDEE2;
+    font-weight: normal;
+}
+
+
+#generate-page main form .generate-cancel-container a {
+    width: 450px;
+    font-style: normal;
+    font-weight: normal;
+    border-radius: 30px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #F56A79;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+#generate-page main form .generate-cancel-container a:hover {
+    background: rgba(245, 106, 121, 0.3);
 }
