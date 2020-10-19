@@ -77,6 +77,8 @@
     border: none;
     border-radius: 20px;
 
+    padding: 20px;
+
     width: 290px;
     height: 40px;
 }
@@ -238,10 +240,15 @@
 #generate-page main .input-block-language .input-language-container .inputs-container {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    width: 100%;;
+
+    margin-bottom: 30px;
 }
 
 #generate-page main .input-block-language .input-language-container .inputs-container .input-container {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
 }
 
