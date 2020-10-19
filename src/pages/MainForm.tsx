@@ -59,8 +59,7 @@ function MainForm() {
         doc.text(`${number} | ${email}`, 105, 40, { align: "center" });
         doc.text(`Idade ${age} | ${nacionality} | ${condition}`, 105, 50, { align: "center" });
         doc.text(objective, 105, 60, { align: "center" });
-        doc.text("Formação academica", 80, 70);
-        doc.line(40, 75, 170, 75);
+        doc.line(40, 65, 170, 65);
 
         if (courses.length !== 0) {
             let dataCourses: string[][] = [];
@@ -70,7 +69,7 @@ function MainForm() {
             autoTable(doc, {
                 head: [["Curso", "Início", "Término", "Instituição"]],
                 body: dataCourses,
-                margin: { top: 80, left: 20 }
+                margin: { top: 70, left: 20 }
             });
         }
 
@@ -82,7 +81,7 @@ function MainForm() {
             autoTable(doc, {
                 head: [["Idioma", "Nível"]],
                 body: dataLanguages,
-                margin: { top: 90, left: 20 }
+                margin: { top: 80, left: 20 }
             });
         }
 
@@ -94,7 +93,7 @@ function MainForm() {
             autoTable(doc, {
                 head: [["Empresa", "Início", "Término", "Atividade Exercida"]],
                 body: dataExperiences,
-                margin: { top: 100, left: 20 }
+                margin: { top: 90, left: 20 }
             });
         }
 
@@ -106,7 +105,7 @@ function MainForm() {
             autoTable(doc, {
                 head: [["Curso", "Início", "Término", "Instituição"]],
                 body: dataAcademics,
-                margin: { top: 110, left: 20 }
+                margin: { top: 100, left: 20 }
             });
         }
 
