@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'
 
 import DeskImg from '../images/desk-illustration.svg';
 import { FaDiscord } from 'react-icons/fa';
@@ -9,6 +10,12 @@ import '../styles/pages/landing.css';
 
 //<a href='https://www.freepik.com/vectors/banner'>Banner vector created by freepik - www.freepik.com</a>
 function Landing() {
+    let history = useHistory()
+    
+    function handleRedirectCreateCurriculum() {
+        history.push('/curriculum')
+    }
+
     return (
         <div id="landing-page">
           <main> 
@@ -24,8 +31,8 @@ function Landing() {
                 <span>Deixe o documento com a gente, apenas informe os dados!</span>
             </section>
             <section className="curriculum-buttons">
-                <Button buttonText="Gerar curriculo"/>
-                <a href="">Sobre o projeto</a>
+                <Button buttonText="Gerar curriculo" fn={handleRedirectCreateCurriculum}/>
+                <a href="https://github.com/Fukubi/FreeCurriculumGenerator" target="_blank" rel="noopener noreferrer" >Sobre o projeto</a>
             </section>
             <img src={DeskImg} alt="Imagem de um computador."/>
           </main>

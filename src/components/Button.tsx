@@ -5,12 +5,13 @@ import '../styles/components/button.css'
 
 interface Button {
     buttonText: string,
+    fn: () => void
 }
 
-const Button: React.FC<Button> = ({ buttonText }) => {
+const Button: React.FC<Button> = ({ buttonText, fn }) => {
   return (
       <div id="button-container">
-        <button>{buttonText}</button>
+        <button onClick={fn}>{buttonText}</button>
       </div>
       
   );

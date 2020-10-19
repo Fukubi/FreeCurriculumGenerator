@@ -62,7 +62,7 @@
     top: 253px;
     font-style: normal;
     font-weight: normal;
-    font-size: 38px;
+    font-size: 2.375rem;
     line-height: 45px;
     text-align: center;
 }
@@ -73,7 +73,7 @@
     top: 350px;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 30px;
     text-align: center;
     margin-bottom: 50px;
@@ -86,7 +86,7 @@
 
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 23px;
     text-align: center;
 }
@@ -123,4 +123,43 @@
 }
 #landing-page main .curriculum-buttons a:hover {
     background: rgba(245, 106, 121, 0.3);
+}
+
+
+@media (max-width: 1200px) {
+    #landing-page main img {
+        display: none;
+    }
+    #landing-page main {
+        padding: 16px;
+        justify-content: center;
+        align-items:center;
+    }
+    #landing-page main .curriculum-info {
+        width: 100%;
+    }
+    #landing-page main .curriculum-info p {
+        width: 100%;
+    }
+    #landing-page main .curriculum-info span {
+        width: 100%;
+    }
+    #landing-page main .curriculum-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #landing-page main .curriculum-buttons a {
+        margin: 0;
+    }
+    html {
+        font-size: 80%;
+    }
+}
+@media (max-width: 670px) { 
+    html {
+        font-size: 55%;
+    }
 }
