@@ -240,57 +240,74 @@
 }
 
 @media(max-width: 1000px) {
-    #landing-page main {
-        align-items: center;
+    #landing-page {
+        position: fixed;
+
         justify-content: center;
+        align-items: center;
+    }
 
-        flex-direction: column;
+    #landing-page main {
+        padding: 0;
         margin: 0;
-        padding: 0;
-        padding-top: 80px;
-    }
+        width: 100vw;
+        height: 80vh;
 
-    #landing-page main h1 {
-        font-size: 25px;
-        padding: 0;
-    }
-
-    #landing-page main p {
-        font-size: 16px;
-    }
-
-    #landing-page main span {
-        width: 80%;
-        font-size: 16px;
+        justify-content: center;
+        align-items: center;
     }
 
     #landing-page main .nerv {
-        padding: 0;
-    }
+        position: absolute;
+        top: 10px;
+        left: 25px;
 
-    #landing-page main .nerv a h2 {
-        padding: 0;
-        font-size: 16px;
-    }
-
-    #landing-page main img {
-        top: -80px;
-        left: 20px;
-    }
-
-    #landing-page main .curriculum-buttons {
         justify-content: center;
+        align-items: center;
+    }
+
+    #landing-page main .nerv h2 {
+        padding-top: 15px;
     }
 
     #landing-page main .curriculum-info {
-        margin: 0;
-        padding: 0;
+        height: 100px;
+        align-items: center;
+    }
+
+    #landing-page main .curriculum-info p {
+        font-size: 16px;
+    }
+
+    #landing-page main .curriculum-info span {
+        width: 60%;
+        font-size: 14px;
+
+        margin-top: -60px;
     }
 
     #landing-page main .curriculum-buttons {
-        justify-content: center;
-        align-items: center;
+        margin-top: -60px;
 
-        width: 300px;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: 130px;
+        width: 50%;
+    }
+
+    #landing-page main .curriculum-buttons #button-container button {
+        width: 200px;
+    }
+
+    #landing-page main .curriculum-buttons a {
+        margin: 0;
+        padding: 0;
+
+        width: 200px;
+    }
+
+    #landing-page main img {
+        width: 0;
     }
 }

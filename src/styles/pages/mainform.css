@@ -348,3 +348,50 @@
 #generate-page main form .generate-cancel-container a:hover {
     background: rgba(245, 106, 121, 0.3);
 }
+
+@media(max-width: 1000px) {
+    #generate-page {
+        position: fixed;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #generate-page main {
+        width: 80%;
+    }
+
+    #generate-page main .input-block-name {
+        flex-direction: column;
+    }
+
+    #generate-page main .input-block-name .input-container input{
+        width: 100%;
+    }
+
+    #generate-page main .input-block-academic .input-academic-container .date-container {
+        flex-direction: column;
+    }
+
+    #generate-page main .input-block-academic .input-academic-container .date-container input {
+        width: 190px;
+    }
+
+    #generate-page main .input-block-language .input-language-container .inputs-container {
+        flex-direction: column;
+    }
+
+    #generate-page main .input-block-language .input-language-container .inputs-container .input-container select {
+        width: 180px;
+    }
+
+    #generate-page main form .generate-cancel-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #generate-page main form .generate-cancel-container #button-container {
+        width: 190px;
+        margin: 0;
+        padding: 0;
+    }
+}
