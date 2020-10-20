@@ -11,7 +11,7 @@ interface Dev {
 }
 
 function About() {
-    const [devs, setDevs] = useState<Dev[]>(
+    const [devs] = useState<Dev[]>(
         [{name: 'Fukubi', github: 'https://github.com/Fukubi'},
         {name: 'Henrique Nitatori', github: 'https://github.com/henrique-nitatori'}])
 
@@ -19,7 +19,8 @@ function About() {
         <div id="about-page">
 
             <div className="container">
-            <header>
+
+            <header className="header-web">
                 <div>
                     <h1>Sobre o projeto</h1>
                 </div>
@@ -28,12 +29,24 @@ function About() {
                 </Link>
             </header>
 
-            <div className="nerv">
-                <h2>NERV Open Source</h2>
-                <h4>Comunidade de desolvimento de projetos open source</h4>
-            </div>
+            <header className="header-mobile">
+                <section>
+                    <Link to="/">
+                        <FaArrowCircleLeft size={44} color="#FFF" />
+                    </Link>
+                </section>
+                <div>
+                    <h1>Sobre o projeto</h1>
+                </div>
+            </header>
+
 
             <main>
+                <div className="nerv">
+                    <h2>NERV Open Source</h2>
+                    <h4>Comunidade de desolvimento de projetos open source</h4>
+                </div>
+
                 <h4>Curriculum Generator</h4>
                 <p className="subtitle">
                     Esse projeto foi criado com o intuito de ajudar as pessoas que não tem tanto conhecimento em informática para criar
