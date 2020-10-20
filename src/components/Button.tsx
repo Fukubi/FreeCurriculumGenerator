@@ -2,6 +2,7 @@ import React from 'react'
 
 import '../styles/components/button.css'
 
+
 interface Button {
   buttonText: string,
 }

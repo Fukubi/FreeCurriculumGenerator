@@ -5,44 +5,86 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background: #1E5F74;
+    background: #E0E0E0;
 }
 
-#about-page header {
+#about-page  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #2D829D;
     width: 100%;
     height: 65px;
-
+    top: 0;
     padding: 20px;
     margin-bottom: 50px;
 }
+#about-page .container {
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+    background: #2D829D;
 
-
-#about-page header h1 {
-    color: #FFF;
-    font-weight: normal;
-}
-
-#about-page main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: #FFF;
-    width: 80%;
-    height: 70%;
-
-    padding: 30px;
-
-    border-radius: 20px;
 }
 
-#about-page main p, h3, li {
+#about-page header h1 {
+    color: #FFF;
+    font-size: 2.375rem;
+    font-weight: normal;
+}
+
+.container .nerv {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-family: 'Palanquin Dark', sans-serif;
+    color: #FFF;
+}
+
+.container .nerv h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.container .nerv h4 {
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+}
+
+#about-page main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FFF;
+    width: 100%;
+    max-width: 960px;
+    height: 498px;
+    top: calc(100vh - 70vh);
+    padding: 24px;
     color: #1E5F74;
+
+}
+#about-page main h4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 44px;
+}
+#about-page main .subtitle {
+    font-size: 1.5625rem;
+    font-weight: normal;
+    text-align:center;
+    margin-bottom: 64px;
+}
+
+#about-page main .divider {
+    width: 100%;
+    height: 1px;
+    border: 1px solid #1E5F74;
 }
 
 #about-page main .main-links {
@@ -50,17 +92,44 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-
-    margin-top: 100px;
+    margin-top: 12px;
 }
+#about-page main .main-links h3{
+    font-size: 1.5625rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#about-page main .main-links ul{
+    list-style: none;
+}
+#about-page main .main-links ul li{
+    margin-top: 10px;
+}
+#about-page main .main-links a{
+    text-decoration: none;
+    font-weight: normal;
+    color: #1E5F74;
+}
+#about-page main .main-links .nerv-community {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 
 #about-page main .main-links .discord-link {
     display: flex;
-    justify-content: space-between;
-    width: 300px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     text-decoration: none;
     color: #1E5F74;
     align-items: center;
+}
+
+.dircord {
+    margin-right: 10px !important;
 }
 
 @media(max-width: 1000px) {
