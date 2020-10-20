@@ -1,0 +1,4 @@
+{
+  "*.+(ts|tsx)": ["yarn run lint", "yarn run format"],
+  "*.+(json|css|md)": ["prettier --write"]
+}
