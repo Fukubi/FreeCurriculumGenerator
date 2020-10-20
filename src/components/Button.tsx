@@ -3,17 +3,17 @@ import React from 'react'
 
 import '../styles/components/button.css'
 
+
 interface Button {
-    buttonText: string,
-    fn: () => void
+  buttonText: string,
 }
 
-const Button: React.FC<Button> = ({ buttonText, fn }) => {
+const Button: React.FC<Button & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ buttonText }, ...props) => {
   return (
-      <div id="button-container">
-        <button onClick={fn}>{buttonText}</button>
-      </div>
-      
+    <div id="button-container">
+      <button {...props}>{buttonText}</button>
+    </div>
+
   );
 }
 
