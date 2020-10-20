@@ -11,7 +11,7 @@ Atualmente, o projeto conta com uma landing page, o formulário, e as funcionali
 
 ![form-page](https://github.com/Fukubi/FreeCurriculumGenerator/blob/main/git%20images/requirements-print.png)
 
-![generated-pdf](https://github.com/Fukubi/FreeCurriculumGenerator/blob/main/git%20images/requirements-print.png)
+![generated-pdf](https://github.com/Fukubi/FreeCurriculumGenerator/blob/main/git%20images/curriculum-example.png)
 
 ## Técnologias utilizadas
 
