@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 
 import '../styles/pages/mainform.css';
-import { cursorTo } from 'readline';
 
 interface CourseInterface {
     name: string,

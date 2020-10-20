@@ -24,10 +24,12 @@ function Landing() {
                     <span>Deixe o documento com a gente, apenas informe os dados!</span>
                 </section>
                 <section className="curriculum-buttons">
-                    <Link to="/generate" style={{ margin: 0, padding: 0}}>
+                    <Link to="/generate" style={{ margin: 0, padding: 0 }}>
                         <Button buttonText="Gerar curriculo" />
                     </Link>
-                    <a href="">Sobre o projeto</a>
+                    <Link to="/about">
+                        Sobre o projeto
+                    </Link>
                 </section>
                 <img src={DeskImg} alt="Imagem de um computador." />
             </main>

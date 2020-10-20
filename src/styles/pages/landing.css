@@ -124,3 +124,65 @@
 #landing-page main .curriculum-buttons a:hover {
     background: rgba(245, 106, 121, 0.3);
 }
+
+@media(max-width: 1000px) {
+
+    
+
+    #landing-page main {
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        padding-top: 80px;
+    }
+
+    #landing-page main h1 {
+        font-size: 25px;
+        padding: 0;
+    }
+
+    #landing-page main p {
+        font-size: 16px;
+    }
+
+    #landing-page main span {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    #landing-page main .nerv {
+        padding: 0;
+    }
+
+    #landing-page main .nerv a h2 {
+        padding: 0;
+        font-size: 16px;
+    }
+
+    #landing-page main img {
+        top: -80px;
+        left: 20px;
+    }
+
+    #landing-page main .curriculum-buttons {
+        justify-content: center;
+    }
+
+    #landing-page main .curriculum-info {
+        margin: 0;
+        padding: 0;
+    }
+
+    #landing-page main .curriculum-buttons {
+        justify-content: center;
+        align-items: center;
+
+        width: 300px;
+    }
+
+    #landing-page main .curriculum-buttons a {
+    }
+}
