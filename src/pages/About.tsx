@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import '../styles/pages/about.css';
 
+
 interface Dev {
     name: string;
     github: string;
@@ -64,9 +65,7 @@ function About() {
                     </div>
                 </div>
             </main>
-
             </div>
-
         </div>
     );
 }

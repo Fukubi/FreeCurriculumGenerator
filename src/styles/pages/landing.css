@@ -216,7 +216,7 @@
     max-width: 471px;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 #landing-page main .curriculum-buttons a {
@@ -238,6 +238,7 @@
 #landing-page main .curriculum-buttons a:hover {
     background: rgba(245, 106, 121, 0.3);
 }
+
 @media(max-width: 1000px) {
     #landing-page main {
         align-items: center;
