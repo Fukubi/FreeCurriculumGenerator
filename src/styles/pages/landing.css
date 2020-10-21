@@ -221,6 +221,11 @@
     justify-content: space-between;
     align-items: center;
 }
+
+#landing-page main .curriculum-buttons #button-container Button {
+    font-weight: normal;
+}
+
 #landing-page main .curriculum-buttons a {
     width: 349px;
     margin-left: 50px;

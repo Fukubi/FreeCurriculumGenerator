@@ -393,5 +393,7 @@
         width: 190px;
         margin: 0;
         padding: 0;
+
+        font-weight: normal;
     }
 }
